@@ -1,0 +1,15 @@
+# Virtualenv
+tacenv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dati e log
+data/
+outputs/
+slurm_*.out
