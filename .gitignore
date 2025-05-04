@@ -1,5 +1,5 @@
 # Ambienti virtuali
-.venv/
+venv/
 env/
 __pycache__/
 
@@ -16,3 +16,4 @@ __pycache__/
 *.png
 *.jpg
 *.jpeg
+classifier
