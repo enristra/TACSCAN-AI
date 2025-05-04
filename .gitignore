@@ -1,0 +1,18 @@
+# Ambienti virtuali
+.venv/
+env/
+__pycache__/
+
+# File di dati pesanti
+*.npz
+*.csv
+
+# Output Python
+*.pyc
+
+# Output notebook
+.ipynb_checkpoints/
+# Binari pesanti
+*.png
+*.jpg
+*.jpeg
