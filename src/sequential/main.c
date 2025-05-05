@@ -7,6 +7,20 @@
 #define THRESHOLD 0.5
 
 double weights[N_FEATURES];  // array pesi
+double bias = 0.0;
+
+void init_model() {
+    srand(1234);
+    for(int i=0;i<N_FEATURES;i++){
+        // piccoli numeri in [-0.01, +0.01]
+        weights[i] = ((rand()/(double)RAND_MAX)-0.5)*0.02;
+    }
+    bias = 0.0;
+}
+
+static inline double sigmoid(double x) {
+    return 1.0 / (1.0 + exp(-x));
+}
 
 void load_csv(const char *filename, double data[N_SAMPLES][N_FEATURES]) {
     FILE *file = fopen(filename, "r");
@@ -49,6 +63,7 @@ int predict(double features[N_FEATURES]) {
 }
 
 int main() {
+    init_model();
     double X[N_SAMPLES][N_FEATURES];
     int y[N_SAMPLES];
     int correct = 0;
